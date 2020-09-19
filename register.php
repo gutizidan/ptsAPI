@@ -17,7 +17,7 @@ if (isset($_POST['nama']) && isset($_POST['email']) && isset($_POST['password'])
   $check = mysqli_num_rows(mysqli_query($con, $query));
   if ($check == 0) {
     $sql = "INSERT INTO tbuser(nama, email, password, noktp, nohp, alamat, roleuser) VALUES ('$nama', '$email', '$password', '$noktp', '$nohp', '$alamat', 1)";
-    $sql2 = "SELECT id FROM tbuser WHERE email = '$email'";
+    $sql2 = "SELECT * FROM tbuser WHERE email = '$email'";
     $result = mysqli_query($con, $sql);
     $result2 = mysqli_query($con,$sql2);
     $row = mysqli_fetch_array($result2, MYSQLI_ASSOC);

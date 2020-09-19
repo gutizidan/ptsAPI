@@ -25,7 +25,7 @@ if (isset($_POST['id'])&& isset($_POST['id_delete'])) {
   else {
     $json["SENDER"] = "RentalMobil";
     $json["STATUS"] = "FAILED";
-    $json["MESSAGE"] = "ORA ADMIN SU";}
+    $json["MESSAGE"] = "ORA ADMIN";}
 
 }
 echo json_encode($json);
